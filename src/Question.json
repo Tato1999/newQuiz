@@ -1,0 +1,243 @@
+[
+{
+    "Quest": "Which shape are the typical orbits of comets?",
+   "ANS1": "Triangle",
+   "ANS2": "Rectangular",
+   "ANS3": "Elliptical",
+   "ANS4": "Help",
+    "correctAnw": "ANS3"
+},
+{
+   "Quest":"According to Isaac Newton, he was inspired to formulate the theory of gravitation when watching the fall of which fruit from a tree?",
+    "ANS1": "Grapes",
+   "ANS2": "Apple",
+   "ANS3": "Pearls",
+   "ANS4": "Help",
+   "correctAnw": "ANS2"
+  },
+{
+    "Quest": "Which natural force helps us slows down the car when pulling the brake?",
+    "ANS1": "Resistance force",
+    "ANS2": "Friction force",
+    "ANS3": "Tension force",
+    "ANS4": "Help",
+    "correctAnw": "ANS2"
+},
+  {
+    "Quest": "Which of the following energy resources generates most of the electricity used all over the world?",
+    "ANS1": "Fossil fuels",
+    "ANS2": "Renewable energy resources",
+    "ANS3": "Nuclear power",
+    "ANS4": "Help",
+  "correctAnw": "ANS1"
+},
+  {
+    "Quest": "Which of the following speeds is faster??",
+    "ANS1": "The speed of sound",
+    "ANS2": "The speed of light",
+    "ANS3": "The speed of electricity",
+    "ANS4": "Help",
+    "correctAnw": "ANS2"
+  },
+  {
+    "Quest": "Which of the following can be measured by the unit horsepower or HP?",
+    "ANS1": "Electrical resistance",
+    "ANS2": "The output of motors",
+    "ANS3": "Air temperature",
+    "ANS4": "Help",
+    "correctAnw": "ANS2"
+  },
+  {
+    "Quest": "There are 4 states of matter in physics: gas, liquid, solid, and …",
+    "ANS1": "Electron",
+    "ANS2": "Crystal",
+    "ANS3": "Plasma",
+    "ANS4": "Help",
+    "correctAnw": "ANS3"
+  },
+  {
+    "Quest": "Which kind of lens is used to make a magnifying glass?",
+    "ANS1": "Convex lens",
+    "ANS2": "Concave lens",
+    "ANS3": "Plano concave lens",
+    "ANS4": "Help",
+    "correctAnw": "ANS1"
+  },
+  {
+    "Quest": "How many colours are there in sunlight?",
+    "ANS1": "7",
+    "ANS2": "3",
+    "ANS3": "1",
+    "ANS4": "Help",
+    "correctAnw": "ANS1"
+  },
+  {
+    "Quest": "How can we calculate the velocity of a vehicle?",
+    "ANS1": "Divide the travelled distance by the taken time",
+    "ANS2": "Divide the taken time by the travelled distance",
+    "ANS3": "Multiply the travelled distance with the taken time",
+    "ANS4": "Help",
+    "correctAnw": "ANS1"
+  },
+  {
+    "Quest": "HWhat are the fundamental units for length, mass, and time?",
+    "ANS1": "Kilometer, kilogram, kilosecond",
+    "ANS2": "Foot, pound, second",
+    "ANS3": "Meter, kilogram, second",
+    "ANS4": "First is wrong",
+    "correctAnw": "ANS3"
+  },
+  {
+    "Quest": "A ladder leans against a wall making a 60 degree angle with the ground. If the length from the base of the ladder to the base of the wall is x meters, how tall is the ladder?",
+    "ANS1": "1 m",
+    "ANS2": "2x m",
+    "ANS3": "2 m",
+    "ANS4": "Help",
+    "correctAnw": "ANS2"
+  },
+  {
+    "Quest": "If Bob runs two laps around a 400 meter track, what is his displacement?",
+    "ANS1": "0 m",
+    "ANS2": "400 m",
+    "ANS3": "1600 m",
+    "ANS4": "Help",
+    "correctAnw": "ANS1"
+  },
+  {
+    "Quest": "What is the difference between a vector and a scalar?",
+    "ANS1": "vector is electric, and a scalar is not.",
+    "ANS2": "vector is faster than a scalar.",
+    "ANS3": "vector has direction, a scalar doesn't",
+    "ANS4": "Help",
+    "correctAnw": "ANS3"
+  },
+  {
+    "Quest": "What is acceleration?",
+    "ANS1": "Change in velocity over change in time.",
+    "ANS2": "Average velocity aver change in time.",
+    "ANS3": "Change in speed over change in time.",
+    "ANS4": "Help",
+    "correctAnw": "ANS1"
+  },
+  {
+    "Quest": "It is easier to roll a stone up a sloping road than to lift it vertical upwards because",
+    "ANS1": "work done in lifting the stone is equal to rolling it",
+    "ANS2": "work done in both is same but the rate of doing work is less in rolling",
+    "ANS3": "work done in rolling a stone is less than in lifting it",
+    "ANS4": "Help",
+    "correctAnw": "ANS3"
+  },
+  {
+    "Quest": "Energy travels from Sun to Earch through",
+    "ANS1": "convection",
+    "ANS2": "radiation",
+    "ANS3": "modulation",
+    "ANS4": "Help",
+    "correctAnw": "ANS2"
+  },
+  {
+    "Quest": "Scalars are quantities that are described by ____________",
+    "ANS1": "Direction",
+    "ANS2": "Magnitude & Direction",
+    "ANS3": "Magnitude",
+    "ANS4": "Help",
+    "correctAnw": "ANS3"
+  },
+  {
+    "Quest": "Which instrument is used to measure altitudes in aircraft?",
+    "ANS1": "Altimeter",
+    "ANS2": "Audiometer",
+    "ANS3": "Anemometer",
+    "ANS4": "Help",
+    "correctAnw": "ANS1"
+  },
+  {
+    "Quest": "The working principle of a washing machine is",
+    "ANS1": "reverse osmosis",
+    "ANS2": "diffusion",
+    "ANS3": "centrifugation",
+    "ANS4": "Help",
+    "correctAnw": "ANS3"
+  },
+  {
+    "Quest": "Albert Einstein was awarded Nobel Prize for his path-breaking research and formulation of the:",
+    "ANS1": "Theory of Relavitity",
+    "ANS2": "Laws of Photo-Electric Effect",
+    "ANS3": "Principle of Wave-Particle Duality",
+    "ANS4": "Help",
+    "correctAnw": "ANS2"
+  },
+  {
+    "Quest": "Ampere is a unit of measure?",
+    "ANS1": "current",
+    "ANS2": "Resistance",
+    "ANS3": "Power",
+    "ANS4": "Help",
+    "correctAnw": "ANS1"
+  },
+  {
+    "Quest": "Who was the inventor of the positron?",
+    "ANS1": "Anderson",
+    "ANS2": "Chadwick",
+    "ANS3": "Rutherford",
+    "ANS4": "Help",
+    "correctAnw": "ANS1"
+  },
+  {
+    "Quest": " Which of the following is measured in Pa (Pascal)?",
+    "ANS1": "Thrust",
+    "ANS2": "Pressure",
+    "ANS3": "Conductivity",
+    "ANS4": "Help",
+    "correctAnw": "ANS1"
+  },
+  {
+    "Quest": "Rate of change of distance is called as?",
+    "ANS1": "Velocity",
+    "ANS2": "Volume",
+    "ANS3": "Speed",
+    "ANS4": "Help",
+    "correctAnw": "ANS3"
+  },
+  {
+    "Quest": "Rate of change of momentum is called?",
+    "ANS1": "Force",
+    "ANS2": "Pressure",
+    "ANS3": "Velocity",
+    "ANS4": "Help",
+    "correctAnw": "ANS1"
+  },
+  {
+    "Quest": "Who in 1231 was the first to describe the science of optics?",
+    "ANS1": "Evangelista Torricelli",
+    "ANS2": "Robert Grosseteste",
+    "ANS3": "dmund Halley",
+    "ANS4": "Help",
+    "correctAnw": "ANS2"
+  },
+  {
+    "Quest": "The unit of temperature is",
+    "ANS1": "Fahrenheit",
+    "ANS2": "Kelvin",
+    "ANS3": "Celsius",
+    "ANS4": "Help",
+    "correctAnw": "ANS2"
+  },
+  {
+    "Quest": "Loudness of sound depends upon ________ of the sound wave",
+    "ANS1": "Frequency",
+    "ANS2": "Wavelength",
+    "ANS3": "Amplitude",
+    "ANS4": "Help",
+    "correctAnw": "ANS3"
+  },
+  {
+    "Quest": "Which of the following terms is not used in the field of physics?",
+    "ANS1": "Latent heat",
+    "ANS2": "Nuclear fusion",
+    "ANS3": "Stock value",
+    "ANS4": "Help",
+    "correctAnw": "ANS3"
+  }
+  
+]
