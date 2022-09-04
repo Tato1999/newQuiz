@@ -7,7 +7,9 @@
     <router-link to="/profile">
     <img src="../assets/login.png" style="width: 50px; height: 50px;">
     </router-link>
+    <router-link to="/top">
     <img src="../assets/top10.png" style="width: 50px; height: 50px; border-radius:50px; margin:0 auto">
+    </router-link>
   <br>
   <br>
   <br>

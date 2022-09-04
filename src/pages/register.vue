@@ -2,19 +2,20 @@
 <div>
     <Header/>
     <div class="form-div">
-        <form class="form-style" @submit.prevent="register"> 
-            <label for="username">Username: </label>
+        <form class="form-style" @submit.prevent="register" >
+           <input type="text" placeholder="Enter Name..." v-model="name"/>
+           <br>
+           <br>
+            <input type="text" placeholder="Enter Second Name..." v-model="secondName"/>
+            <br>
+            <br>
             <input type="email" placeholder="Enter UserName..." v-model="email"/>
             <div style="margin: 15px">
-            <label for="password">Password: </label>
-            <input type="password" placeholder="password" v-model="password"
-            />
+            <input type="password" placeholder="password" v-model="password" />
             <div style="margin: 15px; margin-left: 40px">
-            <label for="password">Repeat:</label>
-            <input type="password" placeholder="password"/>
             </div>
             </div>
-            <input type="submit" value="Register" />
+            <input type="submit" value="Register"/>
              <p>If u have Account going <router-link to="/login">Login</router-link></p>
         </form>
     </div>
@@ -27,7 +28,7 @@
 <script>
 import Header from '../component/heade.vue'
 import {ref} from 'vue';
-import {getAuth, createUserWithEmailAndPassword} from "firebase/auth"
+import firebase from 'firebase'
 import {useRouter} from 'vue-router'
 
 export default {
@@ -37,12 +38,26 @@ export default {
     setup(){
         const email = ref("");
         const password = ref("");
+        const name = ref("");
+        const secondName = ref("");
+        const lvl = 1;
+        const point = 0;
         const router = useRouter();
+        const User = [];
+        const Uid = '';
         const register = () => {
-            createUserWithEmailAndPassword(getAuth(), email.value, password.value)
+           firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
              .then((data) => {
-                console.log("yes Done!!!!")
-                router.push('/')
+                console.log(data)
+                User.push(data)
+                return firebase.firestore().collection("user").doc(User[0].user.uid).set({
+                    id: User[0].user.uid,
+                    name: name.value,
+                    secondName: secondName.value,
+                    level: lvl,
+                    point: point
+                }),
+                router.push('/login')
              })
              .catch((error) =>{
                 console.log(error.code)
@@ -52,12 +67,21 @@ export default {
         return{
             email,
             password,
-            register
+            register,
+            Uid,
+            name,
+            secondName,
+            lvl,
+            point
         }
     },
-    mounted(){
-        
+    methods:{
+    },
+    computed:{
+    db(){
+      return firebase.firestore()
     }
+}
 }
 </script>
 

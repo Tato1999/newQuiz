@@ -8,12 +8,23 @@
 
 import mainpage from './pages/main.vue'
 import Header from './component/heade.vue'
+import firebase from 'firebase'
+import { computed } from '@vue/runtime-core'
 
 export default {
   name: 'App',
   components: {
     mainpage,
     Header
+  },
+  data(){
+  
+  },
+
+  computed:{
+    db(){
+      return firebase.firestore()
+    }
   }
   }
 </script>

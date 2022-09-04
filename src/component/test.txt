@@ -1,0 +1,56 @@
+  data(){
+    return {
+      docLenght: null,
+      pointTop: '',
+      idTop: '',
+      docDataBoth:[],
+      docDataTop: []
+    }
+  },
+  mounted(){
+
+    
+    this.db.collection('user').get()
+    .then((data) => {
+      this.docLenght = data._delegate._snapshot.docChanges.length
+      console.log(this.docLenght)
+      for(let j = 0; j < this.docLenght; j++){
+         this.idTop = data._delegate._snapshot.docChanges[j].doc.data.partialValue.mapValue.fields.id.stringValue
+         this.pointTop = data._delegate._snapshot.docChanges[j].doc.data.partialValue.mapValue.fields.point.integerValue
+         
+          this.pushFunction()
+      }
+      this.uploadTopData()
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+    return firebase.storage().ref('TopData').list()
+    .then((res) => {
+      
+      console.log(res)
+      this.checkUpdate = true;
+    })
+    .catch((error) => {
+      console.log(error.code)
+    })
+  },
+  methods:{
+    pushFunction(){
+        this.docDataBoth.push(this.pointTop,this.idTop)
+        this.docDataTop.push(this.docDataBoth)
+        this.docDataBoth = []
+        console.log(this.docDataTop)
+    },
+    uploadTopData(){
+      let topData = this.docDataTop
+       firebase.storage().ref("TopData").put(topData)
+    .then((data) => {
+      console.log(data)
+      console.log('done')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+    }
+  },

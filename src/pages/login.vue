@@ -24,13 +24,12 @@
 import Header from '../component/heade.vue'
 import{ref} from "vue"
 
-import {getAuth, signInWithEmailAndPassword} from "firebase/auth"
+import firebase from 'firebase'
 import {useRouter} from 'vue-router'
 export default {
     data(){
         return{
-            test: false,
-            User:{}
+            name: ''
         }
     },
   components: {
@@ -40,27 +39,39 @@ export default {
         const email = ref("");
         const password = ref("");
         const router = useRouter();
+        const User = [];
+        const Uid = '';
 
         const login = () => {
-         signInWithEmailAndPassword(getAuth(), email.value, password.value)
+        firebase.auth().signInWithEmailAndPassword(email.value, password.value)
              .then((data) => {
-                console.log("yes Done!!!!")
-                router.push('/login')
-            
-          
-             })
-             .catch((error) =>{
-                console.log(error.code)
-             })
+                User.push(data)
+                const Uid = User[0].user.uid
+                localStorage.setItem('id',Uid)
+                router.push('/profile')
+                console.log(data)
+                
+            })
+            .catch((error) =>{
+              console.log(error.code)
+            })
+             /*if(localStorage.getItem('user') === null){
+                setInterval(() => {
+                    console.log('test')
+                    localStorage.setItem('user', Uid)
+                }, 1000)
+            }*/
         };
 
         return{
             email,
             password,
             login,
-            
+            User,
+            Uid
         }
-    }
+    },
+  
 }
 </script>
 

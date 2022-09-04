@@ -6,6 +6,7 @@ import Login from "./pages/login.vue"
 import Register from "./pages/register"
 import Stage from "./pages/stage"
 import Profile from "./pages/profile"
+import Top from "./pages/top"
 
 
 const routes = [
@@ -46,6 +47,11 @@ const routes = [
     path: "/profile",
     name: "Profile",
     component: Profile,
+  },
+  {
+    path: "/top",
+    name: "Top",
+    component: Top,
   },
 ];
 

@@ -1,5 +1,4 @@
 <template>
-  <Header />
   <div class="timerDiv">
     <div>Correct: {{correct}}</div>
     <div>Timer: {{timer}}</div>
@@ -36,6 +35,7 @@
 import Header from '../component/heade.vue'
 import quest from '../Question.json'
 import Wheel from '../component/wheel.vue'
+import firebase from 'firebase'
 export default {
  components:{
     Header,
@@ -63,6 +63,11 @@ export default {
     helpData: ["ANS1", "ANS2", "ANS3"],
     randomForHelp: 0
   }
+ },
+ computed:{
+  db(){
+      return firebase.firestore()
+    }
  },
  methods:{
   changeQuestNum(){
@@ -146,12 +151,14 @@ export default {
     }, 1000)
     if(this.timer<=1){
       this.loseAlert();
-      this.timeOn = false
+      this.timeOn = false;
+      
     }
   }
  },
  loseAlert(){
   console.log('time Over')
+  
  },
  collect(){
   this.giftValue = sessionStorage.getItem('gift')*1
@@ -166,8 +173,8 @@ export default {
     this.transferPoint += (this.correctTransfer)
     localStorage.setItem('point', this.transferPoint)
   }
-
-  this.clickBool = false
+    this.updateDb()
+    this.clickBool = false
  }
  },
  help(){
@@ -180,6 +187,16 @@ export default {
     this.clickBool = false
   }
   console.log(Math.floor(Math.random()*2))
+  this.db.collection('user').doc(localStorage.getItem('id')).update({
+    point: localStorage.getItem('point')*1 - 10
+  })
+  .then((point) => {
+    console.log(point)
+    console.log('done')
+  })
+  .catch((error) => {
+    console.log(error)
+  })
  },
  helpFunction(){
   if(this.DataQuest[this.QuestNum].correctAnw === "ANS1"){
@@ -214,8 +231,22 @@ export default {
  endQuestion(){
   if(quest.length < this.QuestNum +1){
     this.timeOn = false
+
+   
   }
- }
+ },
+ updateDb(){
+    return this.db.collection('user').doc(localStorage.getItem('id')).update({
+    point: localStorage.getItem('point')*1
+})
+.then((data) => {
+  console.log(data)
+  console.log('changed')
+})
+.catch((error) => {
+  console.log(error.code)
+})
+}
 
 },
 mounted(){
@@ -223,6 +254,7 @@ mounted(){
   console.log(this.correctTransfer)
   
   console.log(this.clickBool)
+ 
 }
 }
 </script>
@@ -235,7 +267,7 @@ mounted(){
 .timerDiv{
   justify-content: space-between;
   display: flex;
-  height: 7vh;
+  height: 15vh;
   background: linear-gradient(gray, rgb(199, 199, 199), rgb(230, 230, 230), white);
   border-radius: 25px 25px 0px 0px;
 }
